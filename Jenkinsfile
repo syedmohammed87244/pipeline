@@ -8,13 +8,6 @@ pipeline {
   }
   
   stages {
-    stage('Checkout') {
-      steps {
-        checkout([$class: 'GitSCM', branches: [[name: 'main']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/syedmohammed87244/pipeline.git']]])
-      }
-    }
-
-  stages {
     stage('Build') {
       steps {
         echo "Fetching the source code from the directory path specified by the environment variable."
